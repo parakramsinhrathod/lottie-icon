@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma To lottie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <nav>
+            <a href="#">
+                <div class="icon"></div>
+                <span>Menu</span>
+            </a>
+        </nav>
+    </section>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" integrity="sha512-jEnuDt6jfecCjthQAJ+ed0MTVA++5ZKmlUcmDGBv2vUI/REn6FuIdixLNnQT+vKusE2hhTk2is3cFvv5wA+Sgg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const icon = document.querySelector('.icon')
+
+        lottie.loadAnimation({
+            container: icon, 
+            renderer: 'svg', 
+            loop: false, 
+            autoplay: false, 
+            path: './animation_lknoxffu.json'
+        })
+
+        lottie.setSpeed(2)
+        
+        icon.addEventListener('mouseenter', () => { 
+            lottie.setDirection('1')
+            lottie.play()
+        })
+        icon.addEventListener('mouseleave', () => { 
+            lottie.setDirection("-1")
+            lottie.play()
+        })
+
+
+    </script>
+</body>
+</html>
